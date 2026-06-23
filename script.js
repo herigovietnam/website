@@ -167,7 +167,7 @@ const places = [
   },
   {
     id: "cot-co-ha-noi",
-    name: "Cột cờ Hà Nội & Cửa Bắc",
+    name: "Cột cờ Hà Nội",
     category: "Lịch sử",
     address: "28A Điện Biên Phủ, Ba Đình, Hà Nội",
     lat: 21.031928,
