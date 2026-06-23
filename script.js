@@ -31,6 +31,21 @@ const places = [
     description: "Biểu tượng truyền thống hiếu học của Việt Nam, nổi bật với bia tiến sĩ, hồ Văn và không gian kiến trúc cổ."
   },
   {
+    id: "hoan-kiem",
+    name: "Hồ Hoàn Kiếm & Phố cổ",
+    category: "Biểu tượng",
+    address: "Quận Hoàn Kiếm, Hà Nội",
+    lat: 21.028779,
+    lng: 105.852572,
+    rating: 4.7,
+    hours: "Cả ngày",
+    price: 0,
+    tip: "45 phút",
+    wikiTitle: "Hồ_Hoàn_Kiếm",
+    tags: ["Di sản nổi bật", "Biểu tượng", "Đi bộ", "Ảnh đẹp", "Check-in", "Miễn phí", "Gần Hồ Gươm", "Phố cổ Hà Nội"],
+    description: "Không gian trung tâm văn hóa lịch sử của Hà Nội, gắn liền với nhịp sống 36 phố phường cổ kính."
+  },
+  {
     id: "den-ngoc-son",
     name: "Đền Ngọc Sơn và cầu Thê Húc",
     category: "Đền/ Chùa",
@@ -861,8 +876,75 @@ async function renderPlaceInfoPanel(place) {
           <strong>${place.tip}</strong>
         </div>
       </div>
+
+      <!-- 🆕 BỔ SUNG: KHỐI ĐÁNH GIÁ & ĐÓNG GÓP CỘNG ĐỒNG THEO ẢNH MẪU -->
+      <div class="community-section" style="margin-top: 20px; padding: 16px; background: #fffaf6; border: 1px solid #e4d7c5; border-radius: 20px;">
+        <h4 style="margin: 0 0 4px 0; font-size: 15px; font-weight: 900; color: #26170f; text-align: center; text-transform: uppercase; letter-spacing: 0.03em;">Đánh giá & Đóng góp<br>Xây dựng cộng đồng</h4>
+        <p style="margin: 0 0 14px 0; font-size: 12px; color: #6f5848; text-align: center; line-height: 1.4;">Đánh giá trải nghiệm, đóng góp nội dung và cùng bảo tồn di sản Việt Nam.</p>
+        
+        <div class="rating-box" style="padding: 12px; background: #fff; border: 1px solid #ead8c0; border-radius: 14px; margin-bottom: 12px;">
+          <strong style="display: block; font-size: 13px; color: #2b1a12; margin-bottom: 6px;">Đánh giá trải nghiệm</strong>
+          <div class="star-row" style="display: flex; gap: 6px; font-size: 22px; color: #ead8c0; margin-bottom: 10px;">
+            <span class="interactive-star" data-value="1" style="cursor: pointer; transition: color 0.15s;">★</span>
+            <span class="interactive-star" data-value="2" style="cursor: pointer; transition: color 0.15s;">★</span>
+            <span class="interactive-star" data-value="3" style="cursor: pointer; transition: color 0.15s;">★</span>
+            <span class="interactive-star" data-value="4" style="cursor: pointer; transition: color 0.15s;">★</span>
+            <span class="interactive-star" data-value="5" style="cursor: pointer; transition: color 0.15s;">★</span>
+          </div>
+          <textarea id="reviewText" placeholder="${place.name} là một công trình..." style="width: 100%; height: 64px; border: 1px solid #e4d7c5; border-radius: 10px; padding: 8px; font-size: 13px; outline: 0; resize: none; background: #fffaf6; color: #2b1a12;"></textarea>
+          <button class="feature-button" id="submitReviewBtn" style="margin-top: 8px; width: 100%; min-height: 32px; height: 32px; font-size: 12px; padding: 0;">Gửi đánh giá</button>
+        </div>
+
+        <strong style="display: block; font-size: 13px; color: #2b1a12; margin-bottom: 8px;">Đóng góp nội dung</strong>
+        <div class="contrib-actions-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;">
+          <button class="feature-button secondary" data-contrib="photo" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 10px 4px; border-radius: 12px; min-height: auto; font-size: 11px; font-weight: 800; gap: 4px;">
+            <span style="font-size: 18px;">📷</span>Đăng ảnh
+          </button>
+          <button class="feature-button secondary" data-contrib="post" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 10px 4px; border-radius: 12px; min-height: auto; font-size: 11px; font-weight: 800; gap: 4px;">
+            <span style="font-size: 18px;">📄</span>Viết bài
+          </button>
+          <button class="feature-button secondary" data-contrib="suggest" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 10px 4px; border-radius: 12px; min-height: auto; font-size: 11px; font-weight: 800; gap: 4px;">
+            <span style="font-size: 18px;">📍</span>Đề xuất di tích
+          </button>
+        </div>
+      </div>
     </div>
   `);
+
+  // Gắn các sự kiện lắng nghe tương tác cho khối cộng đồng mới
+  let selectedRating = 0;
+  const stars = panel.querySelectorAll(".interactive-star");
+  stars.forEach((star) => {
+    star.addEventListener("mouseover", () => {
+      const val = parseInt(star.dataset.value);
+      stars.forEach((s, idx) => s.style.color = idx < val ? "#f59e0b" : "#ead8c0");
+    });
+    star.addEventListener("mouseout", () => {
+      stars.forEach((s, idx) => s.style.color = idx < selectedRating ? "#f59e0b" : "#ead8c0");
+    });
+    star.addEventListener("click", () => {
+      selectedRating = parseInt(star.dataset.value);
+      stars.forEach((s, idx) => s.style.color = idx < selectedRating ? "#f59e0b" : "#ead8c0");
+    });
+  });
+
+  panel.querySelector("#submitReviewBtn").addEventListener("click", () => {
+    if (selectedRating === 0) return showToast("Vui lòng chọn số sao đánh giá.");
+    const text = panel.querySelector("#reviewText").value.trim();
+    showToast(`Cảm ơn bạn đã gửi đánh giá ${selectedRating} sao cho ${place.name}!`);
+    selectedRating = 0;
+    stars.forEach((s) => s.style.color = "#ead8c0");
+    panel.querySelector("#reviewText").value = "";
+  });
+
+  panel.querySelectorAll("[data-contrib]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const type = btn.dataset.contrib;
+      if (type === "photo") showToast("Chức năng tải lên hình ảnh di sản đang được chuẩn bị.");
+      if (type === "post") showToast("Biểu mẫu đóng góp bài viết thuyết minh đang được kết nối.");
+      if (type === "suggest") showToast("Hệ thống đề xuất tọa độ di tích mới đang được xây dựng.");
+    });
+  });
 
   $("#placePanelDirections").addEventListener("click", openDirections);
   $("#placePanelZoom").addEventListener("click", () => map.flyTo([place.lat, place.lng], 17));
@@ -1169,8 +1251,8 @@ window.addEventListener("resize", () => {
 
 const guides = [
   {
-    id: "nguyetmy",
-    name: "Nguyễn Ánh Nguyệt My",
+    id: "mai-anh",
+    name: "Mai Anh",
     level: "Chuyên gia cao cấp",
     status: "Đang rảnh",
     price: 350000,
@@ -1180,8 +1262,8 @@ const guides = [
     description: "Hướng dẫn viên chuyên tuyến di sản trung tâm Hà Nội, phù hợp tour gia đình và học sinh."
   },
   {
-    id: "haidang",
-    name: "Nguyễn Hải Đăng",
+    id: "duc-minh",
+    name: "Đức Minh",
     level: "Giá tốt",
     status: "Đang rảnh",
     price: 220000,
@@ -1191,19 +1273,19 @@ const guides = [
     description: "Phong cách kể chuyện trẻ trung, có thể kết hợp tham quan và trải nghiệm món địa phương."
   },
   {
-    id: "phuongdobaonhi",
-    name: "Phương Đỗ Bảo Nhi",
+    id: "thu-ha",
+    name: "Thu Hà",
     level: "Chuyên gia cao cấp",
     status: "Bận",
-    price: 500000,
+    price: 420000,
     rating: 5.0,
     icon: "👩‍💼",
     skills: ["Bảo tàng", "Dân tộc học", "Văn hóa"],
     description: "Phù hợp tour chuyên sâu về văn hóa, bảo tàng và trải nghiệm học thuật."
   },
   {
-    id: "binhminh",
-    name: "Nguyễn Bình Minh",
+    id: "quang-huy",
+    name: "Quang Huy",
     level: "Giá tốt",
     status: "Đang rảnh",
     price: 250000,
@@ -1213,8 +1295,8 @@ const guides = [
     description: "Gợi ý góc chụp đẹp, phù hợp nhóm bạn trẻ hoặc khách thích check-in."
   },
   {
-    id: "lethaolinh",
-    name: "Lê Thảo Linh",
+    id: "ngoc-linh",
+    name: "Ngọc Linh",
     level: "Chuyên gia cao cấp",
     status: "Đang rảnh",
     price: 390000,
@@ -1235,11 +1317,11 @@ const guides = [
     description: "Hướng dẫn viên thân thiện, phù hợp tour đi bộ phố cổ, Hồ Gươm, Ô Quan Chưởng và Cầu Long Biên."
   },
   {
-    id: "camnhung",
-    name: "Hoàng Thị Cẩm Nhung",
+    id: "minh-chau",
+    name: "Minh Châu",
     level: "Chuyên gia cao cấp",
     status: "Đang rảnh",
-    price: 400000,
+    price: 450000,
     rating: 5.0,
     icon: "👩‍💻",
     skills: ["UNESCO", "Hoàng thành", "Lịch sử Thăng Long"],
@@ -1257,8 +1339,8 @@ const guides = [
     description: "Cựu kiến trúc sư am hiểu sâu sắc về kết cấu nhà gỗ ba gian, nhà ống cổ và khảo cổ học thành lũy."
   },
   {
-    id: "nguyenyennhi",
-    name: "Nguyễn Yến Nhi",
+    id: "hoai-thanh",
+    name: "Hoài Thanh",
     level: "Giá tốt",
     status: "Đang rảnh",
     price: 230000,
