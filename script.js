@@ -1251,19 +1251,19 @@ window.addEventListener("resize", () => {
 
 const guides = [
   {
-    id: "mai-anh",
-    name: "Mai Anh",
+    id: "baonhi",
+    name: "Bảo Nhi",
     level: "Chuyên gia cao cấp",
     status: "Đang rảnh",
-    price: 350000,
+    price: 550000,
     rating: 4.9,
     icon: "👩‍🏫",
     skills: ["Hoàng thành", "Văn Miếu", "Lịch sử triều đại"],
     description: "Hướng dẫn viên chuyên tuyến di sản trung tâm Hà Nội, phù hợp tour gia đình và học sinh."
   },
   {
-    id: "duc-minh",
-    name: "Đức Minh",
+    id: "haidang",
+    name: "Hải Đăng",
     level: "Giá tốt",
     status: "Đang rảnh",
     price: 220000,
@@ -1273,19 +1273,19 @@ const guides = [
     description: "Phong cách kể chuyện trẻ trung, có thể kết hợp tham quan và trải nghiệm món địa phương."
   },
   {
-    id: "thu-ha",
-    name: "Thu Hà",
+    id: "mynguyen",
+    name: "My Nguyễn",
     level: "Chuyên gia cao cấp",
     status: "Bận",
     price: 420000,
-    rating: 5.0,
+    rating: 4.8,
     icon: "👩‍💼",
     skills: ["Bảo tàng", "Dân tộc học", "Văn hóa"],
     description: "Phù hợp tour chuyên sâu về văn hóa, bảo tàng và trải nghiệm học thuật."
   },
   {
-    id: "quang-huy",
-    name: "Quang Huy",
+    id: "binhminh",
+    name: "Bình Minh",
     level: "Giá tốt",
     status: "Đang rảnh",
     price: 250000,
@@ -1295,8 +1295,8 @@ const guides = [
     description: "Gợi ý góc chụp đẹp, phù hợp nhóm bạn trẻ hoặc khách thích check-in."
   },
   {
-    id: "ngoc-linh",
-    name: "Ngọc Linh",
+    id: "yennhi",
+    name: "Yến Nhi",
     level: "Chuyên gia cao cấp",
     status: "Đang rảnh",
     price: 390000,
@@ -1317,8 +1317,8 @@ const guides = [
     description: "Hướng dẫn viên thân thiện, phù hợp tour đi bộ phố cổ, Hồ Gươm, Ô Quan Chưởng và Cầu Long Biên."
   },
   {
-    id: "minh-chau",
-    name: "Minh Châu",
+    id: "thaolinh",
+    name: "Thảo Linh",
     level: "Chuyên gia cao cấp",
     status: "Đang rảnh",
     price: 450000,
@@ -1339,8 +1339,8 @@ const guides = [
     description: "Cựu kiến trúc sư am hiểu sâu sắc về kết cấu nhà gỗ ba gian, nhà ống cổ và khảo cổ học thành lũy."
   },
   {
-    id: "hoai-thanh",
-    name: "Hoài Thanh",
+    id: "cnhung",
+    name: "Cẩm Nhung",
     level: "Giá tốt",
     status: "Đang rảnh",
     price: 230000,
