@@ -31,21 +31,6 @@ const places = [
     description: "Biểu tượng truyền thống hiếu học của Việt Nam, nổi bật với bia tiến sĩ, hồ Văn và không gian kiến trúc cổ."
   },
   {
-    id: "hoan-kiem",
-    name: "Hồ Hoàn Kiếm & Phố cổ",
-    category: "Biểu tượng",
-    address: "Quận Hoàn Kiếm, Hà Nội",
-    lat: 21.028779,
-    lng: 105.852572,
-    rating: 4.7,
-    hours: "Cả ngày",
-    price: 0,
-    tip: "45 phút",
-    wikiTitle: "Hồ_Hoàn_Kiếm",
-    tags: ["Di sản nổi bật", "Biểu tượng", "Đi bộ", "Ảnh đẹp", "Check-in", "Miễn phí", "Gần Hồ Gươm", "Phố cổ Hà Nội"],
-    description: "Không gian trung tâm văn hóa lịch sử của Hà Nội, gắn liền with nhịp sống 36 phố phường cổ kính."
-  },
-  {
     id: "den-ngoc-son",
     name: "Đền Ngọc Sơn và cầu Thê Húc",
     category: "Đền/ Chùa",
@@ -211,36 +196,6 @@ const places = [
     description: "Kho tàng lưu giữ tinh hoa mỹ thuật, hội họa, điêu khắc dân tộc từ thời tiền sử đến đương đại."
   },
   {
-    id: "nha-hat-lon",
-    name: "Nhà hát Lớn Hà Nội",
-    category: "Biểu tượng",
-    address: "1 Tràng Tiền, Hoàn Kiếm, Hà Nội",
-    lat: 21.024303,
-    lng: 105.85708,
-    rating: 4.6,
-    hours: "Theo lịch sự kiện",
-    price: 0,
-    tip: "30 phút",
-    wikiTitle: "Nhà_hát_Lớn_Hà_Nội",
-    tags: ["Di sản nổi bật", "Biểu tượng", "Kiến trúc Pháp", "Check-in", "Miễn phí", "Gần Hồ Gươm"],
-    description: "Công trình kiến trúc tân cổ điển mô phỏng nhà hát Opéra Garnier Paris đầy tráng lệ giữa lòng thủ đô."
-  },
-  {
-    id: "nha-tho-lon",
-    name: "Nhà thờ Lớn Hà Nội",
-    category: "Biểu tượng",
-    address: "40 Nhà Chung, Hoàn Kiếm, Hà Nội",
-    lat: 21.028748,
-    lng: 105.848873,
-    rating: 4.5,
-    hours: "Theo giờ lễ",
-    price: 0,
-    tip: "30 phút",
-    wikiTitle: "Nhà_thờ_Lớn_Hà_Nội",
-    tags: ["Di sản nổi bật", "Biểu tượng", "Kiến trúc Pháp", "Check-in", "Miễn phí", "Gần Hồ Gươm"],
-    description: "Nhà thờ lâu đời mang đậm phong cách kiến trúc Gothic phục hưng with những mảng tường rêu phong cổ kính."
-  },
-  {
     id: "o-quan-chuong",
     name: "Ô Quan Chưởng",
     category: "Lịch sử",
@@ -255,83 +210,8 @@ const places = [
     tags: ["Di sản nổi bật", "Lịch sử", "Phố cổ", "Check-in", "Miễn phí", "Gần Hồ Gươm"],
     description: "Cửa ô duy nhất còn sót lại nguyên vẹn của la thành Thăng Long xưa, mang đậm ký ức thời gian."
   },
-  {
-    id: "cho-dong-xuan",
-    name: "Chợ Đồng Xuân",
-    category: "Biểu tượng",
-    address: "Đồng Xuân, Hoàn Kiếm, Hà Nội",
-    lat: 21.038118,
-    lng: 105.849785,
-    rating: 4.1,
-    hours: "06:00 - 18:00",
-    price: 0,
-    tip: "60 phút",
-    wikiTitle: "Chợ_Đồng_Xuân",
-    tags: ["Biểu tượng", "Phố cổ", "Ẩm thực", "Mua sắm", "Miễn phí", "Gần Hồ Gươm"],
-    description: "Trung tâm giao thương sầm uất lâu đời nhất khu băm sáu phố phường, nổi tiếng với ngõ ẩm thực đa dạng."
-  },
-  {
-    id: "cau-long-bien",
-    name: "Cầu Long Biên",
-    category: "Biểu tượng",
-    address: "Cầu Long Biên, Hoàn Kiếm/Long Biên, Hà Nội",
-    lat: 21.040001,
-    lng: 105.856069,
-    rating: 4.5,
-    hours: "Cả ngày",
-    price: 0,
-    tip: "45 phút",
-    wikiTitle: "Cầu_Long_Biên",
-    tags: ["Di sản nổi bật", "Biểu tượng", "Lịch sử", "Check-in", "Miễn phí"],
-    description: "Cây cầu thép chứng nhân lịch sử bắc qua sông Hồng, do kiến trúc sư người Pháp thiết kế cuối thế kỷ XIX."
-  },
-  {
-    id: "ho-tay",
-    name: "Hồ Tây",
-    category: "Biểu tượng",
-    address: "Quận Tây Hồ, Hà Nội",
-    lat: 21.054286,
-    lng: 105.819454,
-    rating: 4.6,
-    hours: "Cả ngày",
-    price: 0,
-    tip: "90 phút",
-    wikiTitle: "Hồ_Tây",
-    tags: ["Di sản nổi bật", "Biểu tượng", "Đi bộ", "Ảnh đẹp", "Miễn phí", "Gần Hồ Tây", "Check-in"],
-    description: "Gương hồ nước ngọt lớn nhất thành phố, điểm ngắm hoàng hôn buông xuống lãng mạn bậc nhất thủ đô."
-  },
-  {
-    id: "bao-tang-phu-nu",
-    name: "Bảo tàng Phụ nữ Việt Nam",
-    category: "Bảo tàng",
-    address: "36 Lý Thường Kiệt, Hoàn Kiếm, Hà Nội",
-    lat: 21.020803,
-    lng: 105.854764,
-    rating: 4.6,
-    hours: "08:00 - 17:00",
-    price: 40000,
-    tip: "90 phút",
-    wikiTitle: "Bảo_tàng_Phụ_nữ_Việt_Nam",
-    tags: ["Di sản nổi bật", "Bảo tàng", "Văn hóa", "Gia đình", "Có vé", "Gần Hồ Gươm"],
-    description: "Nơi tôn vinh và lưu giữ những hiện vật, câu chuyện hào hùng về người phụ nữ Việt Nam qua các thời kỳ lịch sử."
-  },
-  {
-    id: "bao-tang-lich-su",
-    name: "Bảo tàng Lịch sử Quốc gia",
-    category: "Bảo tàng",
-    address: "1 Tràng Tiền, Hoàn Kiếm, Hà Nội",
-    lat: 21.024177,
-    lng: 105.859209,
-    rating: 4.4,
-    hours: "08:00 - 17:00",
-    price: 40000,
-    tip: "120 phút",
-    wikiTitle: "Bảo_tàng_Lịch_sử_quốc_gia",
-    tags: ["Di sản nổi bật", "Bảo tàng", "Lịch sử", "Văn hóa", "Có vé", "Gần Hồ Gươm"],
-    description: "Hệ thống trưng bày hiện vật quý hiếm, đồ sộ từ thời tiền sơ sử, dựng nước đến triều đại phong kiến cuối cùng."
-  },
 
-  // --- 🆕 ĐỊA DANH MỚI & NGOẠI THÀNH QUAY LẠI ---
+  // --- 🆕 ĐỊA DANH MỚI & NGOẠI THÀNH ---
   {
     id: "co-loa",
     name: "Thành Cổ Loa",
@@ -659,7 +539,6 @@ function matchesCurrentFilter(place) {
 const vrViewpoints = {
   "hoang-thanh": { lat: 21.035781, lng: 105.840052, heading: 15, pitch: 0, zoom: 0 },
   "van-mieu": { lat: 21.028672, lng: 105.835585, heading: 40, pitch: 0, zoom: 0 },
-  "hoan-kiem": { lat: 21.028779, lng: 105.852572, heading: 120, pitch: 0, zoom: 0 },
   "den-ngoc-son": { lat: 21.030724, lng: 105.852328, heading: 70, pitch: 0, zoom: 0 },
   "chua-mot-cot": { lat: 21.035861, lng: 105.833642, heading: 20, pitch: 0, zoom: 0 },
   "bao-tang-dan-toc": { lat: 21.040491, lng: 105.798192, heading: 90, pitch: 0, zoom: 0 },
@@ -671,14 +550,7 @@ const vrViewpoints = {
   "den-quan-thanh": { lat: 21.043083, lng: 105.838094, heading: 220, pitch: 0, zoom: 0 },
   "cot-co-ha-noi": { lat: 21.031928, lng: 105.839754, heading: 120, pitch: 0, zoom: 0 },
   "bao-tang-my-thuat": { lat: 21.030367, lng: 105.837204, heading: 80, pitch: 0, zoom: 0 },
-  "nha-hat-lon": { lat: 21.024303, lng: 105.857080, heading: 300, pitch: 0, zoom: 0 },
-  "nha-tho-lon": { lat: 21.028748, lng: 105.848873, heading: 260, pitch: 0, zoom: 0 },
   "o-quan-chuong": { lat: 21.035049, lng: 105.850975, heading: 100, pitch: 0, zoom: 0 },
-  "cho-dong-xuan": { lat: 21.038118, lng: 105.849785, heading: 210, pitch: 0, zoom: 0 },
-  "cau-long-bien": { lat: 21.040001, lng: 105.856069, heading: 80, pitch: 0, zoom: 0 },
-  "ho-tay": { lat: 21.054286, lng: 105.819454, heading: 160, pitch: 0, zoom: 0 },
-  "bao-tang-phu-nu": { lat: 21.020803, lng: 105.854764, heading: 260, pitch: 0, zoom: 0 },
-  "bao-tang-lich-su": { lat: 21.024177, lng: 105.859209, heading: 230, pitch: 0, zoom: 0 },
   
   // VR Ngoại thành & Điểm mới
   "co-loa": { lat: 21.115316, lng: 105.872523, heading: 180, pitch: 0, zoom: 0 },
@@ -1401,9 +1273,9 @@ const matchInterests = [
   { id: "history", label: "Lịch sử", places: ["hoang-thanh", "van-mieu", "nha-tu-hoa-lo", "co-loa"] },
   { id: "spiritual", label: "Tâm linh", places: ["den-ngoc-son", "chua-mot-cot", "chua-tran-quoc", "phu-tay-ho", "chua-thay"] },
   { id: "museum", label: "Bảo tàng", places: ["bao-tang-dan-toc", "bao-tang-my-thuat", "bao-tang-lich-su", "bao-tang-ho-chi-minh", "bao-tang-ha-noi"] },
-  { id: "photo", label: "Chụp ảnh", places: ["hoan-kiem", "nha-hat-lon", "nha-tho-lon", "lang-gom-bat-trang", "lang-lua-van-phuc"] },
+  { id: "photo", label: "Chụp ảnh", places: ["den-ngoc-son", "o-quan-chuong", "lang-gom-bat-trang", "lang-lua-van-phuc"] },
   { id: "family", label: "Gia đình", places: ["bao-tang-dan-toc", "lang-gom-bat-trang", "lang-to-he-xuan-la", "chua-thay"] },
-  { id: "free", label: "Tiết kiệm", places: ["hoan-kiem", "chua-mot-cot", "lang-bac", "phu-tay-ho"] },
+  { id: "free", label: "Tiết kiệm", places: ["chua-mot-cot", "lang-bac", "phu-tay-ho"] },
   { id: "short", label: "Đi nhanh", places: ["chua-mot-cot", "den-ngoc-son", "o-quan-chuong", "nha-co-ma-may"] },
   { id: "deep", label: "Khám phá sâu", places: ["hoang-thanh", "van-mieu", "co-loa", "lang-co-duong-lam"] },
   { id: "craft", label: "Làng nghề", places: ["lang-gom-bat-trang", "lang-lua-van-phuc", "lang-to-he-xuan-la", "lang-non-chuong", "lang-giay-do-buoi"] },
@@ -1538,25 +1410,24 @@ function buildItinerary(type) {
     halfday: [
       places.find((p) => p.id === "van-mieu"),
       places.find((p) => p.id === "hoang-thanh"),
-      places.find((p) => p.id === "hoan-kiem")
+      places.find((p) => p.id === "den-ngoc-son")
     ].filter(Boolean),
     full: [
       places.find((p) => p.id === "hoang-thanh"),
       places.find((p) => p.id === "van-mieu"),
       places.find((p) => p.id === "nha-tu-hoa-lo"),
-      places.find((p) => p.id === "hoan-kiem"),
+      places.find((p) => p.id === "o-quan-chuong"),
       places.find((p) => p.id === "lang-gom-bat-trang")
     ].filter(Boolean),
     budget: [
-      places.find((p) => p.id === "hoan-kiem"),
-      places.find((p) => p.id === "nha-tho-lon"),
       places.find((p) => p.id === "o-quan-chuong"),
-      places.find((p) => p.id === "chua-tran-quoc")
+      places.find((p) => p.id === "chua-tran-quoc"),
+      places.find((p) => p.id === "phu-tay-ho")
     ].filter(Boolean),
     family: [
       places.find((p) => p.id === "bao-tang-dan-toc"),
       places.find((p) => p.id === "lang-gom-bat-trang"),
-      places.find((p) => p.id === "hoan-kiem")
+      places.find((p) => p.id === "chua-thay")
     ].filter(Boolean)
   };
 
@@ -1570,7 +1441,7 @@ function buildItinerary(type) {
   const times = {
     halfday: ["08:30", "10:00", "11:15"],
     full: ["08:30", "10:15", "13:30", "15:30", "17:00"],
-    budget: ["08:30", "09:30", "10:45", "15:00"],
+    budget: ["08:30", "09:30", "10:45"],
     family: ["08:30", "13:30", "16:30"]
   };
 
@@ -1805,7 +1676,6 @@ function renderExperiences() {
               <p style="margin: 0; font-size: 13px; color: #6f5848; line-height: 1.45;">${exp.desc}</p>
               <div style="margin-top: 8px;">
                 <span class="pill" style="background: #dfe8dc; color: #27735f; font-weight: 800;">⚡ Đặt ngay</span>
-                <!-- Sửa lỗi: Đổi từ place.price thành exp.price để hiển thị chuẩn xác giá tiền -->
                 <span class="pill" style="font-weight: 800;">💰 ${currency(exp.price)}</span>
               </div>
             </div>
