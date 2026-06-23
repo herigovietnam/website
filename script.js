@@ -2025,13 +2025,13 @@ function renderVRHub(selectedId = state.selectedPlace?.id || null) {
 
 function renderMatch() {
   featureBody(`
-    <p class="feature-intro">Chọn ít nhất 2 sở thích, sau đó bấm tạo lịch trình.</p>
-    <div class="interest-grid">
-      ${matchInterests.map((interest) => `<button class="interest-chip ${featureState.selectedInterests.has(interest.id) ? "active" : ""}" data-interest="${interest.id}">${interest.label}</button>`).join("")}
-    </div>
     <div style="display:flex;gap:10px;margin-top:14px;flex-wrap:wrap">
       <button class="feature-button" id="generateMatch">Tạo lịch trình phù hợp</button>
       <button class="feature-button secondary" id="resetMatch">Làm lại</button>
+    </div>
+    <p class="feature-intro">Chọn ít nhất 2 sở thích, sau đó bấm tạo lịch trình.</p>
+    <div class="interest-grid">
+      ${matchInterests.map((interest) => `<button class="interest-chip ${featureState.selectedInterests.has(interest.id) ? "active" : ""}" data-interest="${interest.id}">${interest.label}</button>`).join("")}
     </div>
     <div class="match-result" id="matchResult">${renderMatchResult(false)}</div>
   `);
