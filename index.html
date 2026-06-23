@@ -78,7 +78,40 @@
         <div class="feature-panel-body" id="featurePanelBody"></div>
       </section>
 
-      
+      <section class="place-drawer" id="placeDrawer" aria-live="polite">
+        <button class="drawer-close" id="closeDrawer" aria-label="Đóng thông tin">×</button>
+        <div class="drawer-image" id="drawerImage">
+          <div class="image-loading">Đang tải ảnh thật...</div>
+        </div>
+        <div class="drawer-content">
+          <div class="drawer-kicker" id="drawerCategory">Di sản</div>
+          <h2 id="drawerTitle">Chọn một địa điểm</h2>
+          <p class="drawer-meta" id="drawerMeta">Bấm vào marker hoặc danh sách bên trái để xem chi tiết.</p>
+          <p id="drawerDescription"></p>
+
+          <div class="drawer-actions">
+            <button class="primary" id="btnDirections">↗ Chỉ đường</button>
+            <button id="btnVR">◉ Xem 360°</button>
+            <button id="btnBook">🎟 Đặt vé</button>
+            <button id="btnZoom">＋ Phóng tới</button>
+          </div>
+
+          <div class="mini-info">
+            <div>
+              <span>Giờ mở cửa</span>
+              <strong id="drawerHours">Đang cập nhật</strong>
+            </div>
+            <div>
+              <span>Giá vé</span>
+              <strong id="drawerPrice">Đang cập nhật</strong>
+            </div>
+            <div>
+              <span>Gợi ý</span>
+              <strong id="drawerTip">Tham quan 60 phút</strong>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   </div>
 
